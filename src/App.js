@@ -63,12 +63,6 @@ function App() {
           onKeyDown={handleKeyDown}
         />
       </div>
-      {/* <div className="grid grid-cols-4 grid-rows-3 container mx-auto mt-5 gap-5"> */}
-      {/* <div className="imgage-grid">
-        {images.map((image, index) => (
-          <Images key={image.id} {...image} />
-        ))}
-      </div> */}
       <div className="container mx-auto">
         <div className="image-grid">
           {images.map((image) => (

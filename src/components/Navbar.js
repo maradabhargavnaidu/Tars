@@ -55,7 +55,7 @@ const Navbar = () => {
             </button>
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 items-center">
+            <div className="flex flex-shrink-0 items-center ">
               <Link
                 to="/"
                 className={
@@ -106,14 +106,14 @@ const Navbar = () => {
                 {dark ? (
                   <i
                     class={
-                      "fa-regular fa-moon text-3xl " +
+                      "fa-regular fa-moon md:text-3xl text-xl " +
                       (dark ? "text-white" : "text-gray-700")
                     }
                   ></i>
                 ) : (
                   <i
                     class={
-                      "fa-regular fa-sun text-3xl " +
+                      "fa-regular fa-sun md:text-3xl text-xl " +
                       (dark ? "text-white" : "text-gray-700")
                     }
                   ></i>
