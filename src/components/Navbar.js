@@ -97,12 +97,12 @@ const Navbar = ({ modefunc, dark }) => {
               <div onClick={() => modefunc()} className="cursor-pointer">
                 {dark ? (
                   <div className="flex items-center font-bold gap-2 text-gray-200">
-                    <div className="none md:block">Dark mode</div>
+                    <div className="hidden md:block">Dark mode</div>
                     <i class={"fa-solid fa-toggle-on text-4xl"}></i>
                   </div>
                 ) : (
                   <div className="flex items-center text-black gap-2 font-bold">
-                    <div className="none md:block">Light mode</div>
+                    <div className="hidden md:block">Light mode</div>
                     <i class={"fa-solid fa-toggle-off text-4xl text-black"}></i>
                   </div>
                 )}
