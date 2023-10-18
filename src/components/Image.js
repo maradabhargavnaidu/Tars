@@ -31,12 +31,13 @@ const Image = () => {
           <div className="">
             <div className="flex items-center justify-center">
               <div className="flex flex-col">
-                <img src={imgdata.urls.full} className="w-auto h-[800px]" />
+                <img src={imgdata.urls.raw} className="w-auto h-[800px]" />
                 <div className="flex justify-between my-5">
                   <div className="flex gap-3">
                     <img
-                      src={imgdata.urls.full}
-                      className="w-10  rounded-full"
+                      // src={imgdata.urls.full}
+                      src={imgdata.user.profile_image.small}
+                      className="w-10 h-10 rounded-full"
                     />
                     <div>
                       <div className="dark:text-white">{imgdata.user.name}</div>
