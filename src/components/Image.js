@@ -27,7 +27,7 @@ const Image = () => {
   return (
     <div className="dark:bg-gray-800">
       {t && (
-        <div className="container mx-auto px-5">
+        <div className="container mx-auto px-4">
           <div className="">
             <div className="flex items-center justify-center">
               <div className="flex flex-col">
