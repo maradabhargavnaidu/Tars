@@ -71,7 +71,7 @@ function Home() {
               className="flex flex-col"
               onClick={() => openImage(image.id)}
             >
-              <img src={image.urls.full} alt={image.alt_description} />
+              <img src={image.urls.small} alt={image.alt_description} />
               <div className="flex justify-between items-center">
                 <div className="flex items-center space-x-4 mt-3">
                   <img
