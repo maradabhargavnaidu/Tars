@@ -36,7 +36,7 @@ const Image = () => {
                   <div className="flex gap-3">
                     <img
                       src={imgdata.urls.full}
-                      className="w-10 h-10 rounded-full"
+                      className="w-10  rounded-full"
                     />
                     <div>
                       <div className="dark:text-white">{imgdata.user.name}</div>
