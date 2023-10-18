@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-const Navbar = () => {
+
+const Navbar = ({ modefunc, dark }) => {
   const [navMenuToggle, setNavMenuToggle] = useState(false);
-  const [dark, setDark] = useState(false);
-  const modes = () => {
-    setDark(!dark);
-  };
 
   return (
-    <nav className={"text-gray-800 " + (dark ? "bg-gray-900" : "bg-white")}>
+    <nav className={"text-gray-800 bg-white dark:bg-gray-800 fixed w-full"}>
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -55,13 +52,8 @@ const Navbar = () => {
             </button>
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 items-center ">
-              <Link
-                to="/"
-                className={
-                  "font-bold text-2xl " + (dark ? "text-white" : "text-black")
-                }
-              >
+            <div className="flex flex-shrink-0 items-center dark:text-white">
+              <Link to="/" className={"font-bold text-2xl "}>
                 Image Gallery
               </Link>
             </div>
@@ -102,21 +94,17 @@ const Navbar = () => {
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             {/* <!-- Profile dropdown --> */}
             <div className="relative ml-3">
-              <div onClick={() => modes()} className="cursor-pointer">
+              <div onClick={() => modefunc()} className="cursor-pointer">
                 {dark ? (
-                  <i
-                    class={
-                      "fa-regular fa-moon md:text-3xl text-xl " +
-                      (dark ? "text-white" : "text-gray-700")
-                    }
-                  ></i>
+                  <div className="flex items-center font-bold gap-2 text-gray-200">
+                    Dark mode
+                    <i class={"fa-solid fa-toggle-on text-4xl"}></i>
+                  </div>
                 ) : (
-                  <i
-                    class={
-                      "fa-regular fa-sun md:text-3xl text-xl " +
-                      (dark ? "text-white" : "text-gray-700")
-                    }
-                  ></i>
+                  <div className="flex items-center text-black gap-2 font-bold">
+                    Light mode
+                    <i class={"fa-solid fa-toggle-off text-4xl text-black"}></i>
+                  </div>
                 )}
               </div>
             </div>
