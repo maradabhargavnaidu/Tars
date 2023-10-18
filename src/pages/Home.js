@@ -39,11 +39,11 @@ function Home() {
     Navigate(`${id}`);
   };
 
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
-      searchPhoto(query);
-    }
-  };
+  // const handleKeyDown = (e) => {
+  //   if (e.key === "Enter") {
+  //     searchPhoto(query);
+  //   }
+  // };
 
   return (
     <div className="dark:bg-gray-800 min-h-screen">
@@ -57,10 +57,11 @@ function Home() {
           className="search_box sm:m-10 md:m-0"
           required
           value={query}
-          onChange={(e) => {
-            setQuery(e.target.value);
+          onChange={async (e) => {
+            await setQuery(e.target.value);
+            searchPhoto(query);
           }}
-          onKeyDown={handleKeyDown}
+          // onKeyDown={handleKeyDown}
         />
       </div>
       <div className="container mx-auto">
